@@ -1,144 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Little World ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little World ❤️</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #ffd6e7, #fff);
+  color: #4a2635;
+}
 
-    body {
-      min-height: 100vh;
-      font-family: Georgia, serif;
-      background: linear-gradient(135deg, #ffd6e7, #fff0f5, #e8d9ff);
-      color: #4a2635;
-      text-align: center;
-      overflow-x: hidden;
-    }
+.container {
+  padding: 50px 20px;
+}
 
-    .container {
-      max-width: 850px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+h1 {
+  color: #d6336c;
+  font-size: 38px;
+}
 
-    .heart {
-      font-size: 55px;
-      animation: beat 1.2s infinite;
-    }
+.card {
+  background: white;
+  margin: 25px auto;
+  padding: 25px;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px #ddd;
+}
 
-    h1 {
-      font-size: 42px;
-      margin: 15px 0;
-    }
+h2 {
+  color: #d6336c;
+}
 
-    .subtitle {
-      font-size: 20px;
-      line-height: 1.7;
-      margin-bottom: 35px;
-    }
+p {
+  font-size: 18px;
+  line-height: 1.7;
+}
 
-    .card {
-      background: rgba(255,255,255,0.75);
-      padding: 30px;
-      margin: 25px 0;
-      border-radius: 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-      backdrop-filter: blur(8px);
-    }
+button {
+  background: #d6336c;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 17px;
+}
 
-    .card h2 {
-      margin-bottom: 15px;
-      color: #d6336c;
-    }
-
-    .message {
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    button {
-      border: none;
-      background: #d6336c;
-      color: white;
-      padding: 14px 25px;
-      border-radius: 30px;
-      font-size: 17px;
-      cursor: pointer;
-      margin-top: 15px;
-      box-shadow: 0 6px 15px rgba(214,51,108,0.3);
-    }
-
-    button:hover {
-      transform: scale(1.05);
-    }
-
-    #secret {
-      display: none;
-      margin-top: 20px;
-      font-size: 19px;
-      color: #b21f55;
-      line-height: 1.7;
-    }
-
-    .footer {
-      margin-top: 45px;
-      font-size: 16px;
-    }
-
-    @keyframes beat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.18);
-      }
-    }
-
-    .floating-heart {
-      position: fixed;
-      bottom: -30px;
-      font-size: 22px;
-      animation: float 7s linear infinite;
-      opacity: 0.7;
-      pointer-events: none;
-    }
-
-    @keyframes float {
-      from {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      20% {
-        opacity: 0.8;
-      }
-      to {
-        transform: translateY(-110vh);
-        opacity: 0;
-      }
-    }
-  </style>
+#message {
+  display: none;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <div class="heart">❤️</div>
+<h1>❤️ Our Little World ❤️</h1>
 
-    <h1>Welcome to Our Little World</h1>
+<p>Some memories are meant to stay forever. 🥹❤️</p>
 
-    <p class="subtitle">
-      Some memories are meant to stay forever. 🥹❤️
-    </p>
+<div class="card">
 
-    <div class="card">
-      <h2>For Ruchi ❤️</h2>
+<h2>For Ruchi ❤️</h2>
 
-      <p class="message">
-        Ruchi, tum meri life ka woh
+<p>
+Ruchi, tum meri life ka woh beautiful part ho
+jise main kabhi khona nahi chahta. ❤️
+<br><br>
+Chahe hum kitne bhi door ho,
+mera dil hamesha tumhare paas hi rahega. 🫂
+<br><br>
+You are my little world. ❤️
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>One Little Promise 🥺</h2>
+
+<p>
+Main har situation mein tumhara saath dene ki
+poori koshish karunga. ❤️
+<br><br>
+No matter how far we are,
+you will always have a special place in my heart. 🫶
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>For You 💌</h2>
+
+<button onclick="showMessage()">Tap Here ❤️</button>
+
+<p id="message">
+Ruchi... ❤️
+<br><br>
+I love you more than words can explain. 🥹❤️
+<br><br>
+And if I had to choose again,
+I would still choose you. 🫂💕
+</p>
+
+</div>
+
+<p>
+Made with endless love ❤️
+<br>
+<b>Nirbhay ❤️ Ruchi</b>
+</p>
+
+</div>
+
+<script>
+function showMessage() {
+  document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
