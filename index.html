@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Our Little World ❤️</title>
+<title>For Ruchi ❤️</title>
 
 <style>
 * {
@@ -13,27 +13,31 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: linear-gradient(135deg, #ffd6e7, #fff0f5);
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg, #ffd6e7, #fff5f8, #eadcff);
   color: #4a2635;
+  text-align: center;
 }
 
 .lock {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 20px;
 }
 
 .lock-box {
-  background: white;
+  background: rgba(255,255,255,0.95);
   padding: 30px 20px;
-  border-radius: 25px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border-radius: 30px;
   width: 100%;
-  max-width: 350px;
+  max-width: 360px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.lock-icon {
+  font-size: 55px;
 }
 
 .lock-box h1 {
@@ -41,10 +45,10 @@ body {
 }
 
 #display {
+  min-height: 38px;
   font-size: 28px;
   letter-spacing: 10px;
   margin: 20px;
-  min-height: 35px;
 }
 
 .keypad {
@@ -56,24 +60,20 @@ body {
 .keypad button {
   height: 60px;
   border: none;
-  border-radius: 15px;
+  border-radius: 18px;
   background: #ffd6e7;
-  color: #8f1748;
+  color: #9b2454;
   font-size: 22px;
   font-weight: bold;
 }
 
 .keypad button:active {
-  transform: scale(0.95);
-}
-
-.clear {
-  background: #f3d7e3 !important;
+  transform: scale(0.94);
 }
 
 #wrong {
-  color: #d6336c;
   display: none;
+  color: #d6336c;
 }
 
 #website {
@@ -81,13 +81,466 @@ body {
 }
 
 .container {
-  padding: 40px 18px;
+  max-width: 850px;
+  margin: auto;
+  padding: 45px 18px;
+}
+
+.heart {
+  font-size: 60px;
+  animation: heartbeat 1.2s infinite;
 }
 
 h1 {
   color: #d6336c;
-  font-size: 38px;
+  font-size: 42px;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 1.8;
 }
 
 .card {
- 
+  background: rgba(255,255,255,0.88);
+  margin: 30px 0;
+  padding: 30px 22px;
+  border-radius: 28px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+  color: #d6336c;
+  font-size: 28px;
+}
+
+.card p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 18px auto;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
+
+button.love {
+  border: none;
+  background: #d6336c;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 30px;
+  font-size: 17px;
+}
+
+#secret {
+  display: none;
+}
+
+.final {
+  font-size: 21px !important;
+  color: #b21f55;
+}
+
+@keyframes heartbeat {
+  0%,100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOCK SCREEN -->
+
+<div class="lock" id="lockScreen">
+
+  <div class="lock-box">
+
+    <div class="lock-icon">🔐</div>
+
+    <h1>Our Little Secret ❤️</h1>
+
+    <p>Only for Ruchi 🥹💕</p>
+
+    <p>Enter our special number</p>
+
+    <div id="display"></div>
+
+    <div class="keypad">
+
+      <button onclick="press(1)">1</button>
+      <button onclick="press(2)">2</button>
+      <button onclick="press(3)">3</button>
+
+      <button onclick="press(4)">4</button>
+      <button onclick="press(5)">5</button>
+      <button onclick="press(6)">6</button>
+
+      <button onclick="press(7)">7</button>
+      <button onclick="press(8)">8</button>
+      <button onclick="press(9)">9</button>
+
+      <button onclick="clearCode()">C</button>
+      <button onclick="press(0)">0</button>
+      <button onclick="deleteLast()">⌫</button>
+
+    </div>
+
+    <p id="wrong">Oops 🥺 wrong number.</p>
+
+  </div>
+
+</div>
+
+
+<!-- MAIN WEBSITE -->
+
+<div id="website">
+
+<div class="container">
+
+<div class="heart">❤️</div>
+
+<h1>Welcome To Our Little World</h1>
+
+<p class="subtitle">
+Some memories are meant to stay forever... 🥹❤️
+</p>
+
+
+<div class="card">
+
+<h2>For My Ruchi ❤️</h2>
+
+<p>
+
+Ruchi, pata hai tum meri life mein exactly kya ho?
+
+Tum sirf meri girlfriend nahi ho.
+Tum meri woh person ho jiske saath main apni khushiyan,
+apni problems, apni silly baatein aur apne dreams share karna chahta hoon. ❤️
+
+<br><br>
+
+Kabhi-kabhi main words mein explain nahi kar pata
+ki tum mere liye kitni important ho,
+lekin sach ye hai ki tumhari ek chhoti si smile
+mera pura mood change kar sakti hai. 🥹
+
+<br><br>
+
+Tumse baat karna mere din ka favourite part hai.
+Tumhara message aana, tumhari awaaz sunna,
+tumhara mujhe care karna aur tumhari chhoti-chhoti
+baaton par smile karna...
+ye sab mere liye bahut special hai. ❤️
+
+<br><br>
+
+Distance chahe kitna bhi ho,
+mera dil tumse kabhi door nahi hota.
+Kabhi-kabhi tum physically mere paas nahi hoti,
+lekin meri thoughts mein tum hamesha mere saath hoti ho. 🫂
+
+<br><br>
+
+And honestly Ruchi...
+
+Agar mujhe life mein dobara choose karne ka chance mile,
+toh main phir se tumhe hi choose karunga.
+
+Every single time.
+
+Without thinking twice. ❤️
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>Our Beautiful Memories 📸❤️</h2>
+
+<div class="gallery">
+
+<img src="IMG_20260729_143609_050.jpg" alt="Our Memory 1">
+
+<img src="IMG_20260729_143807_269.jpg" alt="Our Memory 2">
+
+<img src="IMG_20260802_153033_098.jpg" alt="Our Memory 3">
+
+<img src="file_000000008b688208854f340e4f612daf.png" alt="Our Memory 4">
+
+<img src="file_00000000e9988208b35abbb9c58ce17f.png" alt="Our Memory 5">
+
+</div>
+
+<p>
+Ye photos sirf photos nahi hain...
+ye humari little memories hain. 🥹❤️
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>Why I Love You ❤️</h2>
+
+<p>
+
+❤️ Tumhari smile meri favourite hai.
+
+<br><br>
+
+🥹 Tum mujhe samajhne ki koshish karti ho.
+
+<br><br>
+
+🫂 Tumhara care karna mujhe special feel karata hai.
+
+<br><br>
+
+💕 Tumhare saath main khud jaisa reh sakta hoon.
+
+<br><br>
+
+🌙 Tum door hokar bhi mujhe apne paas feel karwati ho.
+
+<br><br>
+
+💗 Tumhari chhoti-chhoti efforts mere liye bahut matter karti hain.
+
+<br><br>
+
+🥰 Tumhari presence meri life ko beautiful banati hai.
+
+<br><br>
+
+🫶 Tumhare saath future imagine karna mujhe khush karta hai.
+
+<br><br>
+
+❤️ Tum meri happiness ka ek bahut important reason ho.
+
+<br><br>
+
+🥹 Aur sabse bada reason...
+
+Tum tum ho.
+
+Aur mujhe tumse pyaar hai.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>One Promise For You 🥺❤️</h2>
+
+<p>
+
+Main promise nahi karta ki humari life mein kabhi problems nahi aayengi.
+
+Problems aayengi.
+
+Arguments bhi honge.
+
+Kabhi hum gussa bhi honge.
+
+Kabhi misunderstandings bhi hongi.
+
+<br><br>
+
+Lekin main itna zaroor chahta hoon ki
+jab bhi aisa kuch ho,
+hum ek dusre ko chhodne ke bajaye
+ek dusre ko samajhne ki koshish karein. 🫂
+
+<br><br>
+
+Main tumhari happiness ko value karna chahta hoon,
+tumhari feelings ko respect karna chahta hoon
+aur tumhe hamesha ye feel karwana chahta hoon
+ki tum mere liye important ho. ❤️
+
+<br><br>
+
+Because you are.
+
+You always will be.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>A Little Surprise For You 💌</h2>
+
+<button class="love" onclick="showSecret()">
+Tap Here ❤️
+</button>
+
+<p id="secret">
+
+Ruchi... 🥹❤️
+
+<br><br>
+
+Agar tum ye padh rahi ho,
+toh bas ek baar smile kar dena.
+
+Because somewhere,
+there is a boy named Nirbhay
+who would do almost anything
+just to see that smile. ❤️
+
+<br><br>
+
+I don't know what the future will look like,
+but I know one thing...
+
+I want you to be a beautiful part of it. 🫂❤️
+
+<br><br>
+
+Thank you for being you.
+
+Thank you for every smile.
+
+Thank you for every conversation.
+
+Thank you for every little effort.
+
+And thank you for being someone
+who makes my world feel a little more beautiful.
+
+<br><br>
+
+I love you, Ruchi. ❤️
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>Forever & Always ❤️</h2>
+
+<p class="final">
+
+Ruchi ❤️
+
+<br><br>
+
+Chahe duniya kitni bhi badal jaaye,
+chahe time kitna bhi pass ho jaaye,
+meri favourite memories mein
+tumhara naam hamesha rahega.
+
+<br><br>
+
+You are my little world. 🌎❤️
+
+<br><br>
+
+With all my love,
+
+<br>
+
+<b>Nirbhay ❤️</b>
+
+</p>
+
+</div>
+
+
+<p>
+Made with endless love ❤️
+</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+let entered = "";
+
+function press(number) {
+
+  if (entered.length >= 4) {
+    return;
+  }
+
+  entered += number;
+
+  document.getElementById("display").innerHTML =
+    "•".repeat(entered.length);
+
+  if (entered.length === 4) {
+
+    if (entered === "1509") {
+
+      document.getElementById("lockScreen").style.display = "none";
+
+      document.getElementById("website").style.display = "block";
+
+      window.scrollTo(0, 0);
+
+    } else {
+
+      document.getElementById("wrong").style.display = "block";
+
+      setTimeout(function() {
+        clearCode();
+      }, 900);
+
+    }
+
+  }
+}
+
+function clearCode() {
+
+  entered = "";
+
+  document.getElementById("display").innerHTML = "";
+
+  document.getElementById("wrong").style.display = "none";
+}
+
+function deleteLast() {
+
+  entered = entered.slice(0, -1);
+
+  document.getElementById("display").innerHTML =
+    "•".repeat(entered.length);
+}
+
+function showSecret() {
+
+  document.getElementById("secret").style.display = "block";
+
+}
+
+</script>
+
+</body>
+  </html>
