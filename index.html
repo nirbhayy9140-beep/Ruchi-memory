@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little World ❤️</title>
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.box { width: 90%; max-width: 400px; }
+h1 { font-size: 28px; }
+#display {
+  font-size: 25px;
+  letter-spacing: 10px;
+  margin: 20px;
+  min-height: 30px;
+}
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+button {
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  background: #222;
+  color: white;
+}
+#memory {
+  display: none;
+}
+img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+<div class="box" id="login">
+  <h1>Enter Passcode 🔐</h1>
+  <div id="display"></div>
+
+  <div class="keypad">
+    <button onclick="press('1')">1</button>
+    <button onclick="press('2')">2</button>
+    <button onclick="press('3')">3</button>
+    <button onclick="press('4')">4</button>
+    <button onclick="press('5')">5</button>
+    <button onclick="press('6')">6</button>
+    <button onclick="press('7')">7</button>
+    <button onclick="press('8')">8</button>
+    <button onclick="press('9')">9</button>
+    <button onclick="clearCode()">⌫</button>
+    <button onclick="press('0')">0</button>
+    <button onclick="checkCode()">✓</button>
+  </div>
+</div>
+
+<div class="box" id="memory">
+  <h1>Welcome to Our Little World ❤️</h1>
+  <p>Some memories are meant to stay forever. 🥹❤️</p>
+  <p>For Ruchi ❤️</p>
+</div>
+
+<script>
+let code = "";
+
+function press(n) {
+  if (code.length < 4) {
+    code += n;
+    document.getElementById("display").innerText =
+      "• ".repeat(code.length);
+  }
+}
+
+function clearCode() {
+  code = "";
+  document.getElementById("display").innerText = "";
+}
+
+function checkCode() {
+  if (code === "1509") {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("memory").style.display = "block";
+  } else {
+    alert("Wrong passcode ❤️");
+    clearCode();
+  }
+}
+</script>
+</body>
+</html>
